@@ -61,6 +61,7 @@ public class CalculatorTest {
         assertEquals(120, calculator.multiplicar(360, 3));
     }
 
+
     @Test
     public void dividirError() {
         assertNotEquals(12, calculator.multiplicar(360, 3));
