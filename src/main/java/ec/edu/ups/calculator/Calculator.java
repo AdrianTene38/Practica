@@ -23,4 +23,12 @@ public class Calculator {
         }
         return valorA * valorB;
     }
+
+    public int getAns() {
+        return ans;
+    }
+
+    public void setAns(int ans) {
+        this.ans = ans;
+    }
 }

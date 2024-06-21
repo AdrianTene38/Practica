@@ -1,10 +1,7 @@
 package ec.edu.ups.calculator;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.*;
@@ -32,13 +29,13 @@ public class CalculatorTest {
 
     @Test
     public void sumarError() {
-        assertEquals(20, calculator.sumar(10, 4));
+        assertEquals(14, calculator.sumar(10, 4));
         System.out.println("Test additions");
     }
 
     @Test
     public void restar() {
-        assertEquals(50, calculator.restar(100, 50) );
+        assertEquals(1, calculator.restar(100, 50) );
     }
 
     @Test
@@ -58,12 +55,23 @@ public class CalculatorTest {
 
     @Test
     public void dividir() {
-        assertEquals(120, calculator.multiplicar(360, 3));
+        assertEquals(120, calculator.dividir(360, 3));
     }
 
 
     @Test
     public void dividirError() {
-        assertNotEquals(12, calculator.multiplicar(360, 3));
+        assertEquals(12, calculator.multiplicar(360, 3));
+    }
+
+    @After
+    public void tearDown(){
+        System.out.println("tearDown()");
+        calculator.setAns(12);
+        calculator=null;
+    }
+    @AfterClass
+    public static void tearDownClass(){
+        System.out.println("tearDownClass()");
     }
 }
