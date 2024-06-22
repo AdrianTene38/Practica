@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b3ef9f-5fca-408c-a779-6caafefb3c05" name="Changes" comment="Se ha creado el pryecto de Testeo de la Practica1">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorParametersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ec/edu/ups/payment/PaymentProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/ICalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ec/edu/ups/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ec/edu/ups/calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ec/edu/ups/payment/PaymentGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ec/edu/ups/payment/PaymentGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ec/edu/ups/payment/PaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ec/edu/ups/payment/PaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorParametersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2i2FQJr04CVtcdWjpUve3vDRfJ7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -55,12 +55,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="ec.edu.ups.payment" />
       <recent name="ec.edu.ups.calculator" />
+      <recent name="ec.edu.ups.payment" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.dividirError">
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PaymentProcessorTest.given_payment_when_is_correct_then_ok">
+    <configuration name="ICalculatorTest.given_two_integers_when_division_then_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
@@ -69,29 +69,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ec.edu.ups.calculator" />
-      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.CalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.dividir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ec.edu.ups.calculator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ec.edu.ups.calculator" />
-      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.CalculatorTest" />
-      <option name="METHOD_NAME" value="dividir" />
+      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.ICalculatorTest" />
+      <option name="METHOD_NAME" value="given_two_integers_when_division_then_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.dividirError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ICalculatorTest.given_two_integers_when_multiplication_then_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
@@ -100,14 +85,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ec.edu.ups.calculator" />
-      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.CalculatorTest" />
-      <option name="METHOD_NAME" value="dividirError" />
+      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.ICalculatorTest" />
+      <option name="METHOD_NAME" value="given_two_integers_when_multiplication_then_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.restar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ICalculatorTest.given_two_integers_when_subtraction_then_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
@@ -116,24 +101,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ec.edu.ups.calculator" />
-      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.CalculatorTest" />
-      <option name="METHOD_NAME" value="restar" />
+      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.ICalculatorTest" />
+      <option name="METHOD_NAME" value="given_two_integers_when_subtraction_then_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.sumar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentProcessorTest.given_payment_when_is_correct_then_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ec.edu.ups.calculator.*" />
+          <option name="PATTERN" value="ec.edu.ups.payment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ec.edu.ups.calculator" />
-      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.calculator.CalculatorTest" />
-      <option name="METHOD_NAME" value="sumar" />
+      <option name="PACKAGE_NAME" value="ec.edu.ups.payment" />
+      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.payment.PaymentProcessorTest" />
+      <option name="METHOD_NAME" value="given_payment_when_is_correct_then_ok" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentProcessorTest.given_payment_when_is_wrong_then_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ec.edu.ups.payment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ec.edu.ups.payment" />
+      <option name="MAIN_CLASS_NAME" value="ec.edu.ups.payment.PaymentProcessorTest" />
+      <option name="METHOD_NAME" value="given_payment_when_is_wrong_then_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorTest.dividirError" />
-        <item itemvalue="JUnit.CalculatorTest.dividir" />
-        <item itemvalue="JUnit.CalculatorTest.restar" />
-        <item itemvalue="JUnit.CalculatorTest.sumar" />
-        <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.PaymentProcessorTest.given_payment_when_is_correct_then_ok" />
+        <item itemvalue="JUnit.PaymentProcessorTest.given_payment_when_is_wrong_then_ok" />
+        <item itemvalue="JUnit.ICalculatorTest.given_two_integers_when_division_then_ok" />
+        <item itemvalue="JUnit.ICalculatorTest.given_two_integers_when_multiplication_then_ok" />
+        <item itemvalue="JUnit.ICalculatorTest.given_two_integers_when_subtraction_then_ok" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +190,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorTest.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ec/edu/ups/calculator/CalculatorTest.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

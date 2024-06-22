@@ -21,6 +21,7 @@ public class CalculatorTest {
         MockitoAnnotations.initMocks(this);
     }
 
+
     @Test
     public void sumar() {
         assertEquals(14, calculator.sumar(10, 4));
@@ -35,34 +36,60 @@ public class CalculatorTest {
 
     @Test
     public void restar() {
-        assertEquals(1, calculator.restar(100, 50) );
+
+        assertEquals(50, calculator.restar(100, 50));
     }
+
+
+
+
 
     @Test
     public void restarError() {
-        assertNotEquals(10, calculator.restar(100, 50) );
+
+        assertEquals(10, calculator.restar(100, 50) );
     }
 
-    @Test
+
+
+
+
+    @Test(timeout = 150)
     public void multiplicar() {
+
         assertEquals(360, calculator.multiplicar(120, 3));
     }
 
+
+
+
+
     @Test
     public void multiplicarError() {
-        assertNotEquals(1000, calculator.multiplicar(120, 3));
+
+        assertEquals(1000, calculator.multiplicar(120, 3));
     }
+
+
+
+
 
     @Test
     public void dividir() {
-        assertEquals(120, calculator.dividir(360, 3));
+        assertEquals(120,
+                calculator.dividir(360, 3));
     }
 
 
-    @Test
+    @Test(expected = ArithmeticException.class)
+    //@Test
     public void dividirError() {
-        assertEquals(12, calculator.multiplicar(360, 3));
+
+        assertEquals(12, calculator.dividir(360, 0));
     }
+
+
+
 
     @After
     public void tearDown(){
@@ -70,8 +97,15 @@ public class CalculatorTest {
         calculator.setAns(12);
         calculator=null;
     }
+
+
+
     @AfterClass
     public static void tearDownClass(){
+
         System.out.println("tearDownClass()");
     }
+
+
+
 }
